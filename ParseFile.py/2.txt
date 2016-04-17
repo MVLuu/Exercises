@@ -1,0 +1,70 @@
+but if you have tried out the examples you have probably seen some. There are (at least) two distinguishable kinds of errors: syntax errors and exceptions.
+also known as parsing errors
+line 1
+the error is detected at the keyword print
+it may cause an error when an attempt is made to execute it. Errors detected during execution are called exceptions and are not unconditionally fatal: you will soon learn how to handle them in Python programs. Most exceptions are not handled by programs
+line 1
+line 1
+line 1
+and the type is printed as part of the message: the types in the example are ZeroDivisionError
+in the form of a stack traceback. In general it contains a stack traceback listing source lines; however
+which asks the user for input until a valid integer has been entered
+the try clause (the statement(s) between the try and except keywords) is executed.
+the except clause is skipped and execution of the try statement is finished.
+the rest of the clause is skipped. Then if its type matches the exception named after the except keyword
+it is passed on to outer try statements; if no handler is found
+to specify handlers for different exceptions. At most one handler will be executed. Handlers only handle exceptions that occur in the corresponding try clause
+TypeError
+because except ValueError
+to serve as a wildcard. Use this with extreme caution
+e.strerror)
+sys.exc_info()[0]
+which
+'r')
+arg
+'has'
+it may have an associated value
+the exception instance defines __str__() so the arguments can be printed directly without having to reference .args.
+'eggs')
+y = inst.args
+x
+y
+'eggs')
+'eggs')
+it is printed as the last part (‘detail’) of the message for unhandled exceptions.
+but also if they occur inside functions that are called (even indirectly) in the try clause. For example:
+detail
+line 1
+a simpler form of the raise statement allows you to re-raise the exception:
+line 2
+either directly or indirectly. For example:
+value):
+value:'
+value: 4
+line 1
+the default __init__() of Exception has been overridden. The new behavior simply creates the value attribute. This replaces the default behavior of creating the args attribute.
+but are usually kept simple
+expr
+prev
+” similar to the naming of the standard exceptions.
+world!'
+world!
+line 2
+whether an exception has occurred or not. When an exception has occurred in the try clause and has not been handled by an except clause (or it has occurred in a except or else clause)
+y):
+result
+1)
+0)
+"1")
+line 1
+line 3
+the finally clause is executed in any event. The TypeError raised by dividing two strings is not handled by the except clause and therefore re-raised after the finally clause has been executed.
+the finally clause is useful for releasing external resources (such as files or network connections)
+regardless of whether or not the operation using the object succeeded or failed. Look at the following example
+
+but can be a problem for larger applications. The with statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
+
+the file f is always closed
+class or function name.
+Python Software Foundation.
+2016. Found a bug?
